@@ -34,7 +34,7 @@ const BN = require('bn.js');
 
 function StringDeserializer(buffer, bufferOffset) {
   const len = UInt32Deserializer(buffer, bufferOffset);
-  const str = buffer.slice(bufferOffset[0], bufferOffset[0] + len).toString('utf8');
+  const str = buffer.slice(bufferOffset[0], bufferOffset[0] + len).toString('binary');
   bufferOffset[0] += len;
   return str;
 }
